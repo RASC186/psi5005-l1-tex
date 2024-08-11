@@ -1,0 +1,104 @@
+Em uma caixa de potencial tridimensional, tem-se $U(x,y,z)=0$ em seu interior
+e $U(x,y,z)=\infty$ externamente. Deste modo, seja a equação de Schrödinger
+dada por
+
+\begin{equation}
+	-\frac{\hbar^{2}}{2m}\;\left(\frac{\partial^{2}\psi(x,y,z)}{\partial x^{2}}
+	+ \frac{\partial^{2}\psi(x,y,z)}{\partial y^{2}}
+	+ \frac{\partial^{2}\psi(x,y,z)}{\partial z^{2}}\right) + U(x,y,z)\;\psi(x,y,z)
+	= E\;\psi(x,y,z)\;,
+	\label{eq:schrodinger_3d_equation}
+\end{equation}
+
+\noindent pode-se facilmente concluir que $\psi(x,y,z)$ será nulo fora da
+caixa e que no seu interior a equação \ref{eq:schrodinger_3d_equation} ficará
+
+\begin{equation}
+	-\frac{\hbar^{2}}{2m}\;\left(\frac{\partial^{2}\psi(x,y,z)}{\partial x^{2}}
+	+ \frac{\partial^{2}\psi(x,y,z)}{\partial y^{2}}
+	+ \frac{\partial^{2}\psi(x,y,z)}{\partial z^{2}}\right) = E\;\psi(x,y,z)\;.
+\end{equation}
+
+\noindent Assumindo, pelo método de separação das variáveis, que esta EDP terá
+uma solução no formato
+
+\begin{equation}
+	\psi(x,y,z) = \psi_{X}(x)\;\psi_{Y}(y)\;\psi_{Z}(z)
+\end{equation}
+
+\noindent e que
+
+\begin{equation}
+	E = E_{X} + E_{Y} + E_{Z}\;,
+\end{equation}
+
+\noindent obtém-se
+
+\begin{equation}
+	\frac{1}{\psi_{X}(x)}\;\frac{\partial^{2}\psi_{X}(x)}{\partial x^{2}} +
+	\frac{1}{\psi_{Y}(y)}\;\frac{\partial^{2}\psi_{Y}(y)}{\partial y^{2}} +
+	\frac{1}{\psi_{Z}(z)}\;\frac{\partial^{2}\psi_{Z}(z)}{\partial z^{2}}
+	= -\frac{2m\;E_{X}}{\hbar^{2}}
+	-\frac{2m\;E_{Y}}{\hbar^{2}}
+	-\frac{2m\;E_{Z}}{\hbar^{2}}
+	\label{eq:schrodinger_3d_equation_inside_the_box}
+\end{equation}
+
+Reescrevendo a equação \ref{eq:schrodinger_3d_equation_inside_the_box} de modo
+a isolar componentes em função de uma mesma variável, observa-se que nela
+existem 3 EDOs:
+
+\begin{equation}
+	\begin{cases}
+		\frac{\partial^{2}\psi_{X}(x)}{\partial x^{2}}
+		= - \frac{2 m\;E_{X}}{\hbar^{2}}\;\psi_{X}(x) \\
+
+		\frac{\partial^{2}\psi_{Y}(y)}{\partial y^{2}}
+		= - \frac{2 m\;E_{Y}}{\hbar^{2}}\;\psi_{Y}(y) \\
+
+		\frac{\partial^{2}\psi_{Z}(z)}{\partial z^{2}} = - \frac{2
+		m\;E_{Z}}{\hbar^{2}}\;\psi_{Z}(z)             \\\end{cases}\;.
+	\label{eq:schrodinger_3d_equation_inside_the_box_system_of_equations}
+\end{equation}
+
+As soluções das EDOs da equação
+\ref{eq:schrodinger_3d_equation_inside_the_box_system_of_equations} são
+conhecidas, pois retratam o caso do poço de potencial infinito unidimensional.
+Assim, sendo a caixa de potencial um cubo de lado $L$, ter-se-á
+
+\begin{equation}
+	\begin{cases}
+		\psi_{X}(x)	=	\psi_{X,n_{x}}(x)	= \sqrt{2/L}\;sen(\frac{n_x \pi x}{L}) \\
+		\psi_{Y}(y)	=	\psi_{Y,n_{y}}(y)	= \sqrt{2/L}\;sen(\frac{n_y \pi y}{L}) \\
+		\psi_{Z}(z)	=	\psi_{Z,n_{z}}(z)	= \sqrt{2/L}\;sen(\frac{n_z \pi z}{L}) \\
+	\end{cases}\;.
+\end{equation}
+
+A solução completa da função de onda e dos níveis de energia da
+partícula em $0<x,y,z<L$ ficará, portanto,
+
+\begin{equation}
+	\psi(x,y,z)	= \psi_{n_x,n_y,n_z}(x,y,z) = \left(\sqrt{2/L}\;\right)^3
+	sen\left(\frac{n_x \pi \, x}{L}\right)
+	sen\left(\frac{n_y \pi \, y}{L}\right)
+	sen\left(\frac{n_z \pi \, z}{L}\right)
+\end{equation}
+
+\noindent e
+
+\begin{equation}
+	E	= E_{n_x,n_y,n_z} =	\left(\frac{\hbar^2}{8\,m\,L^2}\right)\;
+	(n_x^2 + n_y^2 + n_z^2)\;.
+	\label{eq:3d_box_particle_energy}
+\end{equation}
+
+Nota-se a partir da equação \ref{eq:3d_box_particle_energy} que existem
+múltiplos estados (degenerados) em que a energia da partícula confinada será
+mesma. Exemplo:
+
+\begin{equation}
+	E_{2,1,1} =E_{1,2,1} = E_{1,1,2} =
+	\left(\frac{\hbar^2}{8\,m\,L^2}\right)\;(2^2 + 1^2 + 1^2) =
+	\left(\frac{3\,\hbar^2}{4\,m\,L^2}\right)\;.
+\end{equation}
+
