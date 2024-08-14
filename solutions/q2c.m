@@ -1,7 +1,7 @@
 clear;
 clc;
 
-hbar = 6.62607015E-34;
+hbar = 6.62607015E-34/(2*pi);
 me = 9.109E-31;
 m = 0.4*me;
 V0 = (224E-3)*(1.6022E-19);
@@ -20,4 +20,4 @@ plot(E,T);
 title('T x E (m=0.4m_{e}, V_{0}=0.224[eV], L=1[nm])');
 xlabel('E [J]');
 ylabel('T');
-xlim([0 V0]);
+saveas(fig, 'q2c.png', 'png');
